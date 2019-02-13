@@ -1,0 +1,142 @@
+html
+{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper
+{
+    display: grid;
+    grid-template-areas:
+        'header header header header header header header'
+        'aside aside main main main main main'
+        'footer footer footer footer footer footer footer';
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.wrapper > * 
+{
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header 
+{
+    grid-area: header;
+    padding: 30px;
+
+    font-size: 45px;
+    text-align: center;
+    background: #034f84;
+    color: white;
+}
+
+.footer 
+{
+    grid-area: footer;
+    background: #92a8d1;
+}
+
+.main 
+{
+    grid-area: main;
+    text-align: left;
+    background: #f7cac9;
+}
+
+.aside
+{
+    grid-area: aside;
+    font-weight: bold;
+    background: #f7786b;
+    text-align: center;
+}
+
+@media (max-width: 600px) 
+{
+    .wrapper  
+    {
+      grid-template-areas: 
+        'header header header header header header' 
+        'aside aside aside aside aside aside' 
+        'main main main main main main' 
+        'footer footer footer footer footer footer';
+    }
+  }
+
+
+
+
+.flex-container 
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-item 
+{
+    padding: 15px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+
+    line-height: auto;
+    text-align: center;
+}
+
+
+.list-wrapper
+{
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.list
+{
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.list .list-item
+{
+    display: flex;
+    padding: 10px 5px;
+}
+
+.list .list-item__image
+{
+    flex-shrink: 0;
+    height: 80px;
+}
+
+.list .list-item__image img
+{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.list .list-item__content
+{
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.list .list-item__content h4
+{
+    margin: 0;
+    font-size: 18px;
+    margin-top: 15px;
+}
